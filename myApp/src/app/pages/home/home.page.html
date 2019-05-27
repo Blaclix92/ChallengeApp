@@ -12,11 +12,10 @@
           refreshingText="Refreshing...">
         </ion-refresher-content>
       </ion-refresher>
-  <!-- Item Dividers in a List -->
+      
   <ion-list *ngFor="let item of events">
     <ion-item-divider color="light">
       <ion-label>
-        <!-- 18 jun. 2018 -->
         {{item.Date | date:'fullDate'}}
       </ion-label>
     </ion-item-divider>
@@ -25,20 +24,20 @@
     <ion-grid>
         <ion-row>
           <ion-col size="2">
-              <ion-icon class="rotate" size="large" name="md-airplane"  *ngIf="flight.DutyID=='FLT'"></ion-icon>
-              <ion-icon  size="large" name="md-bus" *ngIf="flight.DutyID=='POS'"></ion-icon>
-              <ion-icon  size="large" name="md-hand" *ngIf="flight.DutyID=='SBY'"></ion-icon>
-              <ion-icon  size="large" name="md-briefcase" *ngIf="flight.DutyID=='OFD'"></ion-icon>
-              <ion-icon  size="large" name="md-home" *ngIf="flight.DutyID=='DO'"></ion-icon>
+              <ion-icon class="rotate" size="large" name="md-airplane"  *ngIf="flight.DutyID ==='FLT'"></ion-icon>
+              <ion-icon  size="large" name="md-bus" *ngIf="flight.DutyID ==='POS'"></ion-icon>
+              <ion-icon  size="large" name="md-hand" *ngIf="flight.DutyID ==='SBY'"></ion-icon>
+              <ion-icon  size="large" name="md-briefcase" *ngIf="flight.DutyID ==='OFD'"></ion-icon>
+              <ion-icon  size="large" name="md-home" *ngIf="flight.DutyID ==='DO'"></ion-icon>
           </ion-col>
           <ion-col size="5">
-           <div class="Absolute-TopLeft"*ngIf="flight.DutyID=='FLT'" ><strong> {{flight.Departure}} - {{flight.Destination}} </strong></div>
-           <div class="Absolute-TopLeft"*ngIf="flight.DutyID!=='FLT'"><strong> {{flight.DutyCode}}</strong></div>
+           <div class="Absolute-TopLeft"*ngIf="flight.DutyID ==='FLT'" ><strong> {{flight.Departure}} - {{flight.Destination}} </strong></div>
+           <div class="Absolute-TopLeft"*ngIf="flight.DutyID !=='FLT'"><strong> {{flight.DutyCode}}</strong></div>
             <div class="Absolute-BottomLeft">{{flight.DutyID}}</div>
           </ion-col>
           <ion-col size="5">
-              <div class="Absolute-TopRight"><span *ngIf="flight.DutyID=='SBY'"> Match Crew</span></div>
-              <div class="Absolute-BottomRight" *ngIf="flight.DutyID!=='DO'">{{flight.TimeDepart}} - {{flight.TimeArrive}}</div>
+              <div class="Absolute-TopRight"><span *ngIf="flight.DutyID ==='SBY'"> Match Crew</span></div>
+              <div class="Absolute-BottomRight" *ngIf="flight.DutyID !=='DO'">{{flight.TimeDepart}} - {{flight.TimeArrive}}</div>
           </ion-col>
         </ion-row>
       </ion-grid>

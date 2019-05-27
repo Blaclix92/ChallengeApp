@@ -9,9 +9,10 @@ import { StatusBar } from '@ionic-native/status-bar/ngx';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { HttpClientModule }    from '@angular/common/http';
-import { FlightsService } from 'src/shared/service/api/flights.service';
 import { HTTP } from '@ionic-native/http/ngx';
 import { IonicStorageModule } from '@ionic/storage';
+import { FlightsService } from './service/api/flights.service';
+import { Utils } from './service/utils/utils';
 
 @NgModule({
   declarations: [AppComponent],
@@ -21,6 +22,7 @@ import { IonicStorageModule } from '@ionic/storage';
     StatusBar,
     SplashScreen,
     FlightsService,
+    Utils,
     HTTP,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
   ],
