@@ -1,12 +1,12 @@
-export  class Flight {
+export  type Flight = {
     Flightnr: string;
     Date: string;
     AircraftType: string;
     Tail: string;
     Departure: string;
     Destination: string;
-    Time_Depart: string;
-    Time_Arrive: string;
+    TimeDepart: string;
+    TimeArrive: string;
     DutyID: string;
     DutyCode: string;
     Captain: string;

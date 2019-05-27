@@ -3,6 +3,7 @@
     position: absolute;
     bottom: 0; 
     right: 0;
+    color: red;
 }
 .Absolute-TopRight {
     position: absolute;
@@ -23,3 +24,10 @@
 ion-col{
     position: relative;
 }
+.rotate {
+    display: inline-block; 
+    transform: rotate(45deg);
+  }
+ion-list{
+    padding: 0;
+  }
